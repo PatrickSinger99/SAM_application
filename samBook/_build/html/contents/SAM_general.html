@@ -166,6 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="vergleich.html">Vergleich</a></li>
 <li class="toctree-l1"><a class="reference internal" href="codeBeispiel.html">Anwendungsbeispiel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fazit.html">Fazit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sources.html">Quellenverzeichnis</a></li>
 </ul>
 
     </div>
@@ -336,7 +337,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -352,6 +355,17 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allgemeines">1 Allgemeines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ziel-des-projekts">2 Ziel des Projekts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anforderungen">3 Anforderungen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufbau-des-projekts">4 Aufbau des Projekts</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -363,6 +377,54 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="sam-segment-anything">
 <h1>SAM - Segment Anything<a class="headerlink" href="#sam-segment-anything" title="Permalink to this headline">#</a></h1>
+<p>Paper: <a class="reference external" href="https://arxiv.org/pdf/2304.02643.pdf">Segment Anything</a> von Meta AI Research, 2023</p>
+<section id="allgemeines">
+<h2>1 Allgemeines<a class="headerlink" href="#allgemeines" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Projekt von Meta</p></li>
+<li><p>veröffentlicht in 2023</p></li>
+<li><p>Demo verfügbar unter <a class="reference external" href="https://segment-anything.com/">https://segment-anything.com/</a></p></li>
+<li><p>verfügbar für Forschungszwecke (offene Lizenz, Apache 2.0)</p></li>
+</ul>
+<figure class="align-center" id="sam-example">
+<a class="reference internal image-reference" href="../_images/sam_exampleImage_01.png"><img alt="../_images/sam_exampleImage_01.png" src="../_images/sam_exampleImage_01.png" style="width: 550px; height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Beispielbild mit aufgelegten Masken von SAM <span id="id1">[<a class="reference internal" href="../defaultMarkdowns/markdown.html#id2" title="Alexander Kirillov, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao, Spencer Whitehead, Alexander C. Berg, Wan-Yen Lo, Piotr Dollár, and Ross Girshick. Segment anything. 2023. arXiv:2304.02643.">KMR+23</a>]</span>.</span><a class="headerlink" href="#sam-example" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="ziel-des-projekts">
+<h2>2 Ziel des Projekts<a class="headerlink" href="#ziel-des-projekts" title="Permalink to this headline">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Generelles Ziel</p>
+<p>Our goal is to build a <strong>foundation model</strong> for <strong>image segmentation</strong>. […] <br>
+We seek to develop a <strong>promptable model</strong> and pre-train it on a <strong>broad dataset</strong> using a task that enables powerful <strong>generalization</strong>. <span id="id2">[<a class="reference internal" href="../defaultMarkdowns/markdown.html#id2" title="Alexander Kirillov, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao, Spencer Whitehead, Alexander C. Berg, Wan-Yen Lo, Piotr Dollár, and Ross Girshick. Segment anything. 2023. arXiv:2304.02643.">KMR+23</a>]</span></p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Foundation Model</p>
+<p>Ein Foundation Model ist jedes Modell, das auf umfangreichen Daten trainiert wurde und an eine Vielzahl von weiterführenden Aufgaben angepasst bzw. fine-tuned werden kann. <br>
+Dabei wird im Allgmeinen self-supervised Training verwendet. Aktuelle Beispiele sind BERT, GPT-3 und CLIP. <span id="id3">[<a class="reference internal" href="../defaultMarkdowns/markdown.html#id3" title="Rishi Bommasani, Drew A. Hudson, Ehsan Adeli, Russ Altman, Simran Arora, Sydney von Arx, Michael S. Bernstein, Jeannette Bohg, Antoine Bosselut, Emma Brunskill, Erik Brynjolfsson, Shyamal Buch, Dallas Card, Rodrigo Castellon, Niladri Chatterji, Annie Chen, Kathleen Creel, Jared Quincy Davis, Dora Demszky, Chris Donahue, Moussa Doumbouya, Esin Durmus, Stefano Ermon, John Etchemendy, Kawin Ethayarajh, Li Fei-Fei, Chelsea Finn, Trevor Gale, Lauren Gillespie, Karan Goel, Noah Goodman, Shelby Grossman, Neel Guha, Tatsunori Hashimoto, Peter Henderson, John Hewitt, Daniel E. Ho, Jenny Hong, Kyle Hsu, Jing Huang, Thomas Icard, Saahil Jain, Dan Jurafsky, Pratyusha Kalluri, Siddharth Karamcheti, Geoff Keeling, Fereshte Khani, Omar Khattab, Pang Wei Koh, Mark Krass, Ranjay Krishna, Rohith Kuditipudi, Ananya Kumar, Faisal Ladhak, Mina Lee, Tony Lee, Jure Leskovec, Isabelle Levent, Xiang Lisa Li, Xuechen Li, Tengyu Ma, Ali Malik, Christopher D. Manning, Suvir Mirchandani, Eric Mitchell, Zanele Munyikwa, Suraj Nair, Avanika Narayan, Deepak Narayanan, Ben Newman, Allen Nie, Juan Carlos Niebles, Hamed Nilforoshan, Julian Nyarko, Giray Ogut, Laurel Orr, Isabel Papadimitriou, Joon Sung Park, Chris Piech, Eva Portelance, Christopher Potts, Aditi Raghunathan, Rob Reich, Hongyu Ren, Frieda Rong, Yusuf Roohani, Camilo Ruiz, Jack Ryan, Christopher Ré, Dorsa Sadigh, Shiori Sagawa, Keshav Santhanam, Andy Shih, Krishnan Srinivasan, Alex Tamkin, Rohan Taori, Armin W. Thomas, Florian Tramèr, Rose E. Wang, William Wang, Bohan Wu, Jiajun Wu, Yuhuai Wu, Sang Michael Xie, Michihiro Yasunaga, Jiaxuan You, Matei Zaharia, Michael Zhang, Tianyi Zhang, Xikun Zhang, Yuhui Zhang, Lucia Zheng, Kaitlyn Zhou, and Percy Liang. On the opportunities and risks of foundation models. 2022. arXiv:2108.07258.">BHA+22</a>]</span></p>
+</div>
+</section>
+<section id="anforderungen">
+<h2>3 Anforderungen<a class="headerlink" href="#anforderungen" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>große <strong>Menge an Daten</strong> zum Trainieren</p></li>
+<li><p>Fähigkeit von <strong>Zero-Shot</strong> Learning und Transfer</p></li>
+<li><p>Unterstützung von <strong>flexiblen Prompts</strong></p></li>
+<li><p>Berechnung von Masken in <strong>Echtzeit</strong></p></li>
+<li><p><strong>Mehrdeutigkeit</strong> von Objekten bewusst sein</p></li>
+</ul>
+</section>
+<section id="aufbau-des-projekts">
+<h2>4 Aufbau des Projekts<a class="headerlink" href="#aufbau-des-projekts" title="Permalink to this headline">#</a></h2>
+<figure class="align-center" id="sam-aufbau">
+<a class="reference internal image-reference" href="../_images/sam_aufbau.png"><img alt="../_images/sam_aufbau.png" src="../_images/sam_aufbau.png" style="width: 800px; height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Aufbau des SAM Projekts - (a) Task, (b) Model und (c) Data. <span id="id4">[<a class="reference internal" href="../defaultMarkdowns/markdown.html#id2" title="Alexander Kirillov, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao, Spencer Whitehead, Alexander C. Berg, Wan-Yen Lo, Piotr Dollár, and Ross Girshick. Segment anything. 2023. arXiv:2304.02643.">KMR+23</a>]</span></span><a class="headerlink" href="#sam-aufbau" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -425,6 +487,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allgemeines">1 Allgemeines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ziel-des-projekts">2 Ziel des Projekts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anforderungen">3 Anforderungen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufbau-des-projekts">4 Aufbau des Projekts</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

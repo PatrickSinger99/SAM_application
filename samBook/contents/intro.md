@@ -1,11 +1,11 @@
 # Intro
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+In diesem Jupyter Book wird das Paper "Segment Anything", welches 2023 von Meta herausgebracht wurde, vorgestellt. <br>
+Hier soll eine Übersicht über das Thema "Semantic Segmentation" gegeben werden, indem zuerst allgemein das Thema vorgestellt wird und danach auf die einzelnen Aspekte des Papers eingegangen wird. <br>
 
-Check out the content pages bundled with this sample book to see more.
+Dieses Jupyter Book ist im Rahmen der Vorlesung "Object Recognition in Image and Video Data" im Sommersemester 2023 entstanden und wurde von Patrick Singer und Teresa Mary Kutzner erstellt.
+
+Inhaltsverzeichnis:
 
 ```{tableofcontents}
 ```
