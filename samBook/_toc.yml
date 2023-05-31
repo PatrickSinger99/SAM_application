@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: contents/intro
+chapters:
+- file: contents/semanticSegmentation
+- file: contents/SAM_general
+  sections:
+  - file: contents/SAM_task
+  - file: contents/SAM_dataEngine
+  - file: contents/SAM_model
+- file: contents/vergleich
+- file: contents/codeBeispiel
+- file: contents/fazit
