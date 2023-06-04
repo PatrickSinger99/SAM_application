@@ -1,4 +1,4 @@
 __pycache__/
 samBook/_build/
-# samBook/contents/.ipynb_checkpoints/
+samBook/contents/.ipynb_checkpoints/
 .idea
