@@ -337,7 +337,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -353,6 +355,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prompt">Prompt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maske">Maske</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-training">Pre-Training</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -364,8 +376,39 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="image-segmentation-task">
 <h1>Image Segmentation Task<a class="headerlink" href="#image-segmentation-task" title="Permalink to this headline">#</a></h1>
-<p>wui</p>
-<p>aiaiai</p>
+<section id="prompt">
+<h2>Prompt<a class="headerlink" href="#prompt" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Prinzip kommt von Natural Language Processing</p></li>
+<li><p>ein Prompt für Image Segmentation kann … sein</p>
+<ul>
+<li><p>Punkte im Vordergrund / Hintergrund</p></li>
+<li><p>eine (ungefähre) Box oder Maske</p></li>
+<li><p>freier Text <br>
+→ jegliche <strong>Information, die angibt was im Bild segmentiert werden soll</strong></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="maske">
+<h2>Maske<a class="headerlink" href="#maske" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Umrandung des Bereichs im Bild, der durch den Prompt erfragt wurde</p></li>
+<li><p>“valide” Maske</p>
+<ul>
+<li><p>Problem der <strong>Mehrdeutigkeit</strong></p></li>
+<li><p>Prompt ist mehrdeutig und könnte zu mehreren Sachen referenzieren
+→ Ausgabe sollte <strong>eine sinvolle Maske für mindestens eines der Objekte sein</strong></p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p><em>this task […] leads to a <strong>natural pre-training algorithm</strong> and a general method for <strong>zero-shot transfer</strong> to downstream segmentation tasks via <strong>prompting</strong>.</em></p>
+</div></blockquote>
+</section>
+<section id="pre-training">
+<h2>Pre-Training<a class="headerlink" href="#pre-training" title="Permalink to this headline">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -426,6 +469,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prompt">Prompt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maske">Maske</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-training">Pre-Training</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
