@@ -1,4 +1,0 @@
-# Quellenverzeichnis
-
-```{bibliography}
-```
