@@ -10,6 +10,7 @@ chapters:
   - file: contents/SAM_task
   - file: contents/SAM_dataEngine
   - file: contents/SAM_model
+- file: contents/transfer_experiments
 - file: contents/vergleich
 - file: contents/codeBeispiel
 - file: contents/fazit
