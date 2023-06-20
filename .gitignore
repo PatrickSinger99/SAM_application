@@ -3,3 +3,6 @@ samBook/_build/
 samBook/contents/.ipynb_checkpoints/
 .ipynb_checkpoints/
 .idea
+application_example_fish/fish.mp4
+application_example_fish/images/
+application_example_fish/object_detection/
