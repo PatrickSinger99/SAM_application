@@ -3,12 +3,13 @@
 
 title: SAM - Segment Anything Model
 author: Patrick Singer and Teresa Kutzner
+copyright: "2023. All rights reserved."
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: auto
+  execute_notebooks: 'off'
 
 # Define the name of the latex output file for PDF builds
 latex:
