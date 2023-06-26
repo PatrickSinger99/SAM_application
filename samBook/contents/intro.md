@@ -5,7 +5,7 @@ Hier soll eine Übersicht über das Thema "Semantic Segmentation" gegeben werden
 
 Dieses Jupyter Book ist im Rahmen der Vorlesung "Object Recognition in Image and Video Data" im Sommersemester 2023 entstanden und wurde von Patrick Singer und Teresa Mary Kutzner erstellt.
 
-Inhaltsverzeichnis:
+### Inhaltsverzeichnis:
 
 ```{tableofcontents}
 ```
